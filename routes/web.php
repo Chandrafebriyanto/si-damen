@@ -26,3 +26,6 @@ Route::middleware(['auth'])->group(function () {
     // Route::get('/input-parameter', [SomeController::class, 'inputParameter'])->name('input.parameter');
     // Route::get('/pasca-panen', [SomeController::class, 'pascaPanen'])->name('pasca.panen');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
